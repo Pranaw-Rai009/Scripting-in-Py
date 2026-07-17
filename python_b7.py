@@ -1,4 +1,5 @@
 import os
+import shutil
 from pathlib import Path
 
 #Write a Python script using the modern with open syntax that opens a file named system_status.log in
@@ -14,3 +15,11 @@ with open(path, "a") as f:
 with open(path, "r") as f:
     data = f.read()
     print(data)
+
+
+dest_path = Path("/home/pranaw_rai/PycharmProjects/PythonProject/Easy_Py")
+
+# if we use shutil.copy = it copies a file to another path with filename or also to dir drop
+# if we use shutil.copyfile = it copies a file to another path but filename is must
+shutil.copy(path, dest_path)
+
